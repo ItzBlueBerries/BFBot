@@ -1,3 +1,5 @@
+const global = require('../../global.json');
+
 const discord = require('discord.js');
 
 module.exports = {

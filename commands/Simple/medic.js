@@ -1,4 +1,5 @@
-const discord = require('discord.js');
+const { Client, Intents, MessageAttachment } = require('discord.js');
+const discord = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 module.exports = {
 	name: 'medic',
