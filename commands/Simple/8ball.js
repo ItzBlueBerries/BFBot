@@ -36,9 +36,7 @@ module.exports = {
 			'Outlook not so good.',
 			'Very doubtful.'
 		];
-		let embed = new discord.MessageEmbed()
-			.setTitle('🎱 ' + responses[Math.floor(Math.random() * responses.length)])
-			.setColor(global.embedColor);
+		embed.setTitle('🎱 ' + responses[Math.floor(Math.random() * responses.length)]);
 		return message.channel.send(embed);
 	}
 }
