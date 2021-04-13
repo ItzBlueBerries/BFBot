@@ -71,7 +71,7 @@ module.exports = {
 			'https://www.youtube.com/watch?v=3sVF_W_gph8', // wavetro - google images
 			'https://www.youtube.com/watch?v=li1pBqfGmrE' // The Average F2P - ay yo red spy is in the base
 		];
-		if (input == 'count') {
+		if (args[0] == 'count') {
 			let embed = new discord.MessageEmbed()
 				.setTitle('I currently have ' + videos.length +	' videos available for random selection.');
 			message.reply(embed);
