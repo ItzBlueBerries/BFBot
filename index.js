@@ -13,9 +13,9 @@ bot.aliases = new discord.Collection();
 })
 
 bot.on("ready", async () => {
-	console.log(`${bot.user.username} is online.`)
-	status = ">help"
-	bot.user.setActivity(status, {type: "PLAYING"});
+    console.log(`${bot.user.username} is online.`)
+    status = "Try again later! | >help"
+      bot.user.setActivity(status, {type: "PLAYING"});
 })
 
 bot.on("message", async message => {
