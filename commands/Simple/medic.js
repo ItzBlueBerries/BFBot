@@ -4,7 +4,7 @@ module.exports = {
 	name: 'medic',
 	category: 'Simple',
 	description: 'Get a random Team Fortress 2 Medic call as audio.',
-	run: async (bot, message, args) => {
+	run: async (bot, message) => {
 		let medicCalls = [
 			'https://wiki.teamfortress.com/w/images/3/3c/Scout_medic01.wav',
 			'https://wiki.teamfortress.com/w/images/1/15/Scout_medic02.wav',
