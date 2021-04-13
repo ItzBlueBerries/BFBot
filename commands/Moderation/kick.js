@@ -30,9 +30,14 @@ module.exports = {
   }
     
     let embed = new discord.MessageEmbed()
+<<<<<<< HEAD
     .setTitle("User has been kicked.")
     .setDescription(`${target} (${target.id})`)
     .setColor("75A8E9")
+=======
+    .setDescription(`User has been kicked: ${target} (${target.id})`)
+    .setColor(embedColor)
+>>>>>>> 55acb4ccfa12ab49061771751b515115b403349e
     .setThumbnail(target.avatarURL)
     .setFooter(`Kicked by ${message.author.tag}.`);
     
