@@ -14,7 +14,7 @@ bot.aliases = new discord.Collection();
 
 bot.on('ready', async () => {
     console.log(`${bot.user.username} is online.`);
-    status = 'Insert slogan here. | >help';
+    status = '>help | random slogans when';
     bot.user.setActivity(status, {type: 'PLAYING'});
 });
 
@@ -44,8 +44,10 @@ bot.on('message', async message => {
 		command = bot.commands.get(bot.aliases.get(cmd));
 
     // If a command is finally found, run the command
-    if (command) 
+    if (command) {
+		console.log(`Running ${global.prefix}${command.name} for ${message.author.username} in ${message.guild.name}.`);
 		command.run(bot, message, args);
+	}
 })
 
 bot.login(botconfig.token);
