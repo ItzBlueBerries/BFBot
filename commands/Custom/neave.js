@@ -1,4 +1,4 @@
-const global = require("./global.json");
+const global = require("../global.json");
 
 const discord = require("discord.js");
 
