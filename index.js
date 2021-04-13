@@ -1,5 +1,5 @@
 const botconfig = require("./botconfig.json");
-const embedColor = '51a5eb';
+const global = require("./global.json");
 
 const discord = require("discord.js");
 
@@ -23,16 +23,16 @@ bot.on("message", async message => {
 		return;
     if(!message.guild)
 		return;
-    if (botconfig.prefix === null)
-		prefix = botconfig.prefix;
-    if (!message.content.startsWith(botconfig.prefix))
+    if (global.prefix === null)
+		prefix = global.prefix;
+    if (!message.content.startsWith(global.prefix))
 		return;
 
 	// If message.member is uncached, cache it.
     if (!message.member)
 		message.member = await message.guild.fetchMember(message);
 
-    const args = message.content.slice(botconfig.prefix.length).trim().split(/ +/g);
+    const args = message.content.slice(global.prefix.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
 
     if (cmd.length === 0)

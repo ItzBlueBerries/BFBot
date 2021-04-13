@@ -1,3 +1,5 @@
+const global = require("./global.json");
+
 const discord = require("discord.js");
 
 module.exports = {
@@ -74,7 +76,7 @@ module.exports = {
 		if (args[0] == 'count') {
 			let embed = new discord.MessageEmbed()
 				.setTitle('I currently have ' + videos.length +	' videos available for random selection.')
-				.setColor(embedColor);
+				.setColor(global.embedColor);
 			message.channel.send(embed);
 		} else {
 			message.channel.send(videos[Math.floor(Math.random() * videos.length)]);

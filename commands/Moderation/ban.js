@@ -1,3 +1,5 @@
+const global = require("./global.json");
+
 const discord = require("discord.js");
 
 module.exports = {
@@ -31,7 +33,7 @@ module.exports = {
     
     let embed = new discord.MessageEmbed()
     .setDescription(`User has been banned: ${target} (${target.id})`)
-    .setColor(embedColor)
+    .setColor(global.embedColor)
     .setThumbnail(target.avatarURL)
     .setFooter(`Banned by ${message.author.tag}.`);
     

@@ -1,3 +1,5 @@
+const global = require("./global.json");
+
 const discord = require("discord.js");
 
 module.exports = {
@@ -30,7 +32,7 @@ module.exports = {
 		];
 		let embed = new discord.MessageEmbed()
 			.setTitle('🎱 ' + responses[Math.floor(Math.random() * 20)])
-			.setColor(embedColor);
+			.setColor(global.embedColor);
 		message.channel.send(embed);
 	}
 }
