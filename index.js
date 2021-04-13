@@ -1,34 +1,33 @@
-const botconfig = require("./botconfig.json");
-const global = require("./global.json");
+const botconfig = require('./botconfig.json');
+const global = require('./global.json');
 
-const discord = require("discord.js");
+const discord = require('discord.js');
 
 const bot = new discord.Client({disableEveryone: true});
 
 bot.commands = new discord.Collection();
 bot.aliases = new discord.Collection();
 
-["command"].forEach(handler => {
+['command'].forEach(handler => {
 	require(`./handlers/${handler}`)(bot)
 })
 
-bot.on("ready", async () => {
-    console.log(`${bot.user.username} is online.`)
-    status = "Try again later! | >help"
-      bot.user.setActivity(status, {type: "PLAYING"});
+bot.on('ready', async () => {
+    console.log(`${bot.user.username} is online.`);
+    status = 'Insert slogan here. | >help';
+    bot.user.setActivity(status, {type: 'PLAYING'});
 })
 
-bot.on("message", async message => {
-    if (message.author.bot || message.channel.type === "dm")
+bot.on('message', async message => {
+    if (message.author.bot || message.channel.type === 'dm')
 		return;
-    if(!message.guild)
+
+    if (!message.guild)
 		return;
-    if (global.prefix === null)
-		prefix = global.prefix;
+
     if (!message.content.startsWith(global.prefix))
 		return;
 
-	// If message.member is uncached, cache it.
     if (!message.member)
 		message.member = await message.guild.fetchMember(message);
 
@@ -41,7 +40,8 @@ bot.on("message", async message => {
     // Get the command
     let command = bot.commands.get(cmd);
     // If none is found, try to find it by alias
-    if (!command) command = bot.commands.get(bot.aliases.get(cmd));
+    if (!command)
+		command = bot.commands.get(bot.aliases.get(cmd));
 
     // If a command is finally found, run the command
     if (command) 

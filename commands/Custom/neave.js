@@ -1,12 +1,12 @@
-const global = require("../../global.json");
+const global = require('../../global.json');
 
-const discord = require("discord.js");
+const discord = require('discord.js');
 
 module.exports = {
-	name: "neave",
-	category: "Custom",
+	name: 'neave',
+	category: 'Custom',
 	description: "Be linked to a random, curated YouTube video. To see the number of videos curated, add 'count'.",
-	usage: "neave {count}",
+	usage: 'neave {count}',
 	run: async (client, message, args) => {
 		let videos = [
 			'https://www.youtube.com/watch?v=XDWz4Y3ThRI', // FerBro - Engie's Escape Adventures, but it's lego city commercial

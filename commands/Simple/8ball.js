@@ -1,12 +1,12 @@
-const global = require("../../global.json");
+const global = require('../../global.json');
 
-const discord = require("discord.js");
+const discord = require('discord.js');
 
 module.exports = {
-	name: "8ball",
-	category: "Simple",
-	description: "Get your fortune told from the Magic 8-Ball.",
-	usage: "8ball",
+	name: '8ball',
+	category: 'Simple',
+	description: 'Get your fortune told from the Magic 8-Ball.',
+	usage: '8ball',
 	run: async (client, message, args) => {
 		let responses = [
 			'It is certain.',
