@@ -6,7 +6,14 @@ module.exports = {
 	name: '8ball',
 	category: 'Simple',
 	description: 'Get your fortune told from the Magic 8-Ball.',
+	usage: '[question]',
 	run: async (bot, message, args) => {
+		let embed = new discord.MessageEmbed()
+			.setColor(global.embedColor);
+		if (!args[0]) {
+			embed.setDescription('You must provide a question to receive wisdom: `${global.prefix} [question]`');
+			return message.channel.send(embed);
+		}
 		let responses = [
 			'It is certain.',
 			'It is decidedly so.',
@@ -29,12 +36,9 @@ module.exports = {
 			'Outlook not so good.',
 			'Very doubtful.'
 		];
-		if(!args[0]) {
-			message.channel.send("Please provide a question! Try again later.")
-		}
 		let embed = new discord.MessageEmbed()
-			.setTitle('🎱 ' + responses[Math.floor(Math.random() * 20)])
+			.setTitle('🎱 ' + responses[Math.floor(Math.random() * responses.length)])
 			.setColor(global.embedColor);
-		message.channel.send(embed);
+		return message.channel.send(embed);
 	}
 }
