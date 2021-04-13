@@ -7,7 +7,7 @@ module.exports = {
 	category: 'Custom',
 	description: "Be linked to a random, curated YouTube video. To see the number of videos curated, add 'count'.",
 	usage: 'neave {count}',
-	run: async (client, message, args) => {
+	run: async (bot, message, args) => {
 		let videos = [
 			'https://www.youtube.com/watch?v=XDWz4Y3ThRI', // FerBro - Engie's Escape Adventures, but it's lego city commercial
 			'https://www.youtube.com/watch?v=jXDV1eo7CO8', // ChickenPika - YTP: Of Raps and Rosens

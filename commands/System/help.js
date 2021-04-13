@@ -8,7 +8,7 @@ module.exports = {
 	category: 'System',
 	description: 'View the commands hub and access various categories of commands.',
 	usage: 'help {category | command}',
-	run: async (client, message, args) => {
+	run: async (bot, message, args) => {
 		// let category = null;
 		// let command = null;
 		// for (all commands)
