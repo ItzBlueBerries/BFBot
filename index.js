@@ -9,14 +9,14 @@ bot.commands = new discord.Collection();
 bot.aliases = new discord.Collection();
 
 ['command'].forEach(handler => {
-	require(`./handlers/${handler}`)(bot)
-})
+	require(`./handlers/${handler}`)(bot);
+});
 
 bot.on('ready', async () => {
     console.log(`${bot.user.username} is online.`);
     status = 'Insert slogan here. | >help';
     bot.user.setActivity(status, {type: 'PLAYING'});
-})
+});
 
 bot.on('message', async message => {
     if (message.author.bot || message.channel.type === 'dm')
@@ -25,7 +25,7 @@ bot.on('message', async message => {
     if (!message.guild)
 		return;
 
-    if (!message.content.startsWith(global.prefix))
+    if (!message.content.startsWith(global.prefix) || message.content.startsWith(global.prefix + ' '))
 		return;
 
     if (!message.member)
