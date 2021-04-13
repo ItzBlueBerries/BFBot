@@ -1,9 +1,8 @@
 module.exports = {
-    name: "ping",
-    category: "Simple",
-    description: "Bot ping.",
-    usage: "ping",
+    name: 'ping',
+    category: 'Simple',
+    description: 'Bot ping.',
     run: (bot, message) => {
-        message.channel.send(`Pong!\n${bot.ws.ping}ms`);
+        message.channel.send('Pong!');
     }
 }

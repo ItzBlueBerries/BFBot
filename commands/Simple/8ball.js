@@ -1,11 +1,12 @@
-const discord = require("discord.js");
+const global = require('../../global.json');
+
+const discord = require('discord.js');
 
 module.exports = {
-	name: "8ball",
-	category: "Simple",
-	description: "Get your fortune told from the Magic 8-Ball.",
-	usage: "8ball",
-	run: async (client, message, args) => {
+	name: '8ball',
+	category: 'Simple',
+	description: 'Get your fortune told from the Magic 8-Ball.',
+	run: async (bot, message) => {
 		let responses = [
 			'It is certain.',
 			'It is decidedly so.',
@@ -33,7 +34,7 @@ module.exports = {
 		}
 		let embed = new discord.MessageEmbed()
 			.setTitle('🎱 ' + responses[Math.floor(Math.random() * 20)])
-			.setColor(embedColor);
+			.setColor(global.embedColor);
 		message.channel.send(embed);
 	}
 }

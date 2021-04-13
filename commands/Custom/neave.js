@@ -1,11 +1,13 @@
-const discord = require("discord.js");
+const global = require('../../global.json');
+
+const discord = require('discord.js');
 
 module.exports = {
-	name: "neave",
-	category: "Custom",
-	description: "Be linked to a random, curated YouTube video. To see the number of videos curated, add 'count'.",
-	usage: "neave {count}",
-	run: async (client, message, args) => {
+	name: 'neave',
+	category: 'Custom',
+	description: "Be linked to a random, curated YouTube video. To see the number of videos curated, add __count__.",
+	usage: "{'count'}",
+	run: async (bot, message, args) => {
 		let videos = [
 			'https://www.youtube.com/watch?v=XDWz4Y3ThRI', // FerBro - Engie's Escape Adventures, but it's lego city commercial
 			'https://www.youtube.com/watch?v=jXDV1eo7CO8', // ChickenPika - YTP: Of Raps and Rosens
@@ -74,7 +76,7 @@ module.exports = {
 		if (args[0] == 'count') {
 			let embed = new discord.MessageEmbed()
 				.setTitle('I currently have ' + videos.length +	' videos available for random selection.')
-				.setColor(embedColor);
+				.setColor(global.embedColor);
 			message.channel.send(embed);
 		} else {
 			message.channel.send(videos[Math.floor(Math.random() * videos.length)]);
