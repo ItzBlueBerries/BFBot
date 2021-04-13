@@ -12,10 +12,11 @@ module.exports = {
 			.setTitle('Support Center')
 			.setDescription(`*He beeps, he bleeps, but most of all, he's sweet.*\n\nBFBot is being developed by Fruitsy and Jack5 to be a general purpose Discord bot for recreational use.`)
 			.addFields(
-				{name: 'Fruitsy - Programmer', value: '`Fruitsy#6513`'},
-				{name: 'Jack5 - Programmer and hosting', value: '`Jack5#1720` https://discord.gg/scRdSXY'}
+				{name: 'Fruitsy - Large Programmer & Contributor', value: '`Fruitsy#6513`'},
+				{name: 'Jack5 - Small Programmer and hosting', value: '`Jack5#1720` https://discord.gg/scRdSXY'}
 			)
 			// .setThumbnail(bot.user.displayAvatarURL) - DOESN'T WORK FOR SOME REASON!
+			// (Fruitsy Comment: You know nothing about this stuff lol, I know why it didn't work)
 			.setFooter(`Hosted on 5th Planet | Los Angeles`);
 		message.channel.send(embed);
 	}
