@@ -28,6 +28,9 @@ module.exports = {
 			'Outlook not so good.',
 			'Very doubtful.'
 		];
+		if(!args[0]) {
+			message.channel.send("Please provide a question! Try again later.")
+		}
 		let embed = new discord.MessageEmbed()
 			.setTitle('🎱 ' + responses[Math.floor(Math.random() * 20)])
 			.setColor(embedColor);
