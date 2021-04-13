@@ -6,7 +6,6 @@ module.exports = {
 	name: '8ball',
 	category: 'Simple',
 	description: 'Get your fortune told from the Magic 8-Ball.',
-	usage: '8ball',
 	run: async (bot, message) => {
 		let responses = [
 			'It is certain.',

@@ -6,7 +6,7 @@ module.exports = {
 	name: 'kick',
 	category: 'Moderation',
 	description: 'kickorsomethinglol',
-	usage: 'kick [@mention] [reason]',
+	usage: '[@mention] [reason]',
 	run: async (bot, message, args) => {
 		if (!message.member.hasPermission('KICK_MEMBERS'))
 			return message.channel.send('You are missing **KICK_MEMBERS** permission! Try again later.');

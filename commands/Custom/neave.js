@@ -5,8 +5,8 @@ const discord = require('discord.js');
 module.exports = {
 	name: 'neave',
 	category: 'Custom',
-	description: "Be linked to a random, curated YouTube video. To see the number of videos curated, add 'count'.",
-	usage: 'neave {count}',
+	description: "Be linked to a random, curated YouTube video. To see the number of videos curated, add __count__.",
+	usage: "{'count'}",
 	run: async (bot, message, args) => {
 		let videos = [
 			'https://www.youtube.com/watch?v=XDWz4Y3ThRI', // FerBro - Engie's Escape Adventures, but it's lego city commercial
