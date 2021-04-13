@@ -4,7 +4,4 @@
     "discord.js": "^12.5.3",
     "fs": "^0.0.1-security"
   }
-  "nodemonConfig": {
-    "delay": 10000
-  }
 }
