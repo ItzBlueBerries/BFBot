@@ -73,10 +73,11 @@ module.exports = {
 		];
 		if (args[0] == 'count') {
 			let embed = new discord.MessageEmbed()
-				.setTitle('I currently have ' + videos.length +	' videos available for random selection.');
-			message.reply(embed);
+				.setTitle('I currently have ' + videos.length +	' videos available for random selection.')
+				.setColor(embedColor);
+			message.channel.send(embed);
 		} else {
-			message.reply(videos[Math.floor(Math.random() * videos.length)]);
+			message.channel.send(videos[Math.floor(Math.random() * videos.length)]);
 		}
 	}
 }

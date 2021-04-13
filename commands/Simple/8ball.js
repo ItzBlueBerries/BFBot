@@ -29,7 +29,8 @@ module.exports = {
 			'Very doubtful.'
 		];
 		let embed = new discord.MessageEmbed()
-			.setTitle('🎱 ' + responses[Math.floor(Math.random() * 20)]);
-		message.reply(embed);
+			.setTitle('🎱 ' + responses[Math.floor(Math.random() * 20)])
+			.setColor(embedColor);
+		message.channel.send(embed);
 	}
 }

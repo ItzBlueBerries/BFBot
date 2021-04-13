@@ -31,7 +31,7 @@ module.exports = {
     
     let embed = new discord.MessageEmbed()
     .setDescription(`User has been banned: ${target} (${target.id})`)
-    .setColor("75A8E9")
+    .setColor(embedColor)
     .setThumbnail(target.avatarURL)
     .setFooter(`Banned by ${message.author.tag}.`);
     
