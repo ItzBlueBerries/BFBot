@@ -7,6 +7,7 @@ module.exports = {
 	category: 'Simple',
 	description: 'Get your fortune told from the Magic 8-Ball.',
 	usage: '[question]',
+	author: 'Jack5',
 	run: async (bot, message, args) => {
 		let embed = new discord.MessageEmbed()
 			.setColor(global.embedColor);

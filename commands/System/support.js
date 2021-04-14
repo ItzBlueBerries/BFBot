@@ -6,6 +6,7 @@ module.exports = {
 	name: 'support',
 	category: 'System',
 	description: 'Contact the bot creators to make suggestions and bug reports.',
+	author: 'Jack5',
 	run: async (bot, message) => {
 		let embed = new discord.MessageEmbed()
 			.setColor(global.embedColor)

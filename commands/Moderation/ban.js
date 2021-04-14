@@ -7,6 +7,7 @@ module.exports = {
 	category: 'Moderation',
 	description: 'idkwhattoaddherernsonothingherehaehfrayyayayasanoasnauigjajfano',
 	usage: '[@mention] [reason]',
+	author: 'Fruitsy',
 	run: async (bot, message, args) => {
 		if (!message.member.hasPermission('BAN_MEMBERS'))
 			return message.channel.send('You are missing the **BAN_MEMBERS** permission! Try again later.');

@@ -6,7 +6,8 @@ module.exports = {
 	name: 'rps',
 	category: 'Gambling',
 	description: 'Start a Rock, Paper, Scissors battle.',
-	usage: '[rock | paper | scissors]',
+	usage: "['rock' | 'paper' | 'scissors']",
+	author: 'Jack5',
 	run: async (bot, message, args) => {
 		let embed = new discord.MessageEmbed()
 			.setColor(global.embedColor);

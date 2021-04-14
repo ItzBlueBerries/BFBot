@@ -7,6 +7,7 @@ module.exports = {
 	category: 'Custom',
 	description: "Allow other users to vote on a previously discussed topic. You may optionally add a number of __choices__ between 1 and 10.",
 	usage: "{choices}",
+	author: 'Jack5',
 	run: async (bot, message, args) => {
 		if (!args[0] || isNaN(parseInt(args[0]))) {
 			await message.react('✅');
