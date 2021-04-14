@@ -4,6 +4,6 @@ module.exports = {
     description: `Bot ping.`,
 	author: `Fruitsy`,
     run: (bot, message) => {
-        message.channel.send(`Pong!`);
+        message.channel.send(`Pong!\n${bot.ws.ping}`);
     }
 }
