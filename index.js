@@ -25,13 +25,13 @@ bot.on('message', async message => {
     if (!message.guild)
 		return;
 
-    if (!message.content.startsWith(global.prefix) || message.content.startsWith(global.prefix + ' '))
+    if (!message.content.startsWith(botconfig.prefix) || message.content.startsWith(botconfig.prefix + ' '))
 		return;
 
     if (!message.member)
 		message.member = await message.guild.fetchMember(message);
 
-    const args = message.content.slice(global.prefix.length).trim().split(/ +/g);
+    const args = message.content.slice(botconfig.prefix.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
 
     if (cmd.length === 0)
@@ -45,7 +45,7 @@ bot.on('message', async message => {
 
     // If a command is finally found, run the command
     if (command) {
-		console.log(`Running ${global.prefix}${command.name} for ${message.author.username} in ${message.guild.name}.`);
+		console.log(`Running ${botconfig.prefix}${command.name} for ${message.author.username} in ${message.guild.name}.`);
 		command.run(bot, message, args);
 	}
 })

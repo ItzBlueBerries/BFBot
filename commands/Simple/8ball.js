@@ -12,7 +12,7 @@ module.exports = {
 		let embed = new discord.MessageEmbed()
 			.setColor(global.embedColor);
 		if (!args[0]) {
-			embed.setDescription(`You must provide a question to receive wisdom: \`${global.prefix} [question]\``);
+			embed.setDescription(`You must provide a question to receive wisdom.`);
 			return message.channel.send(embed);
 		}
 		let responses = [
